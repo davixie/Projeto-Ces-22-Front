@@ -1,0 +1,82 @@
+.rodape-container{
+    margin: 0 auto;
+    max-width: 2000px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.rodape-container .rodape-information{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #6e0000;
+}
+
+.rodape-container .rodape-information section{
+    text-align: center;
+}
+
+.rodape-container .rodape-information section h3{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.rodape-container .rodape-information section h4{
+    margin-top: -5px;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.rodape-container .rodape-end{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6e0000;
+}
+
+.rodape-container .rodape-end h3{
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.rodape-container .rodape-end section a{
+    margin-right: 30px;
+}
+
+@media (max-width: 800px){
+    .rodape-container{
+        max-width: 800px;
+    }
+    
+    .rodape-container .rodape-information{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .rodape-container .rodape-information section h3{
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .rodape-container .rodape-information section h4{
+        margin-top: -7px;
+        font-size: 13px;
+    }
+    
+    .rodape-container .rodape-end{
+        margin-top: 10px;
+    }
+    
+    .rodape-container .rodape-end h3{
+        font-size: 15px;
+    }
+    
+    .rodape-container .rodape-end section a{
+        margin-right: 5px;
+    }
+}

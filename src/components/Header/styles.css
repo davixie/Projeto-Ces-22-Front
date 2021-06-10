@@ -1,0 +1,100 @@
+.header{
+    margin: 0 auto;
+    max-width: 2000px;
+    width: 100%;
+    height: 100px;
+}
+
+.header-container{
+    margin: 0 auto;
+    max-width: 2000px;
+    width: 100%;
+    height: 85px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #fff;
+    transition: background-color 0.5s, height 0.5s;
+}
+
+.header-container:hover{
+    height: 100px;
+    /* background-color: #e4e4e4; */
+}
+
+.header-container .section-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container .section-title img{
+    margin-top: 10px;
+    width: 75px;
+}
+
+.header-container a{
+    text-decoration: none;
+    color: #6e0000;
+    font-size: 17px;
+    transition: font-size 0.2s;
+}
+
+.header-container a:hover{
+    font-size: 20px
+}
+
+/* --------------------------*/
+
+.header-container-mobile{
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    height: 70px;
+    background-color: #FFF;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container-mobile div{
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+}
+
+.header-container-mobile a{
+    margin-left: 20px;
+}
+
+.header-container-mobile img{
+    max-width: 60px;
+    width: 100%;
+}
+
+.header-container-mobile div .dropper-container{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -70px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #6e0000;
+    border-radius: 8px;
+}
+
+.dropper-container a{
+    color: #FFF;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+    margin-right: 20px;
+    text-decoration: none;
+}

@@ -1,0 +1,31 @@
+.home_img{
+    margin: 0 auto;
+    max-width: 2000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.home_img img{
+    max-width: 2000px;
+    height: 700px;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (max-width: 800px){
+    .home_img{
+        margin: 0 auto;
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home_img img{
+        max-width: 800px;
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+    }
+}
