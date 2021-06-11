@@ -5,3 +5,23 @@ body{
 h1, h2, h3, h4, p, a{
     font-family: tahoma,tahoma-w01-regular,tahoma-w02-regular,tahoma-w10-regular,tahoma-w15--regular,tahoma-w99-regular,sans-serif;
 }
+
+button{
+    width: 250px;
+    height: 60px;
+    background: #6e0000;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+button:hover{
+    filter: brightness(150%);
+}

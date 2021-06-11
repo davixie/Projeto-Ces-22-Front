@@ -1,0 +1,134 @@
+.forms-container{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.forms-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forms-container form .section-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.forms-container form .section-input .title{
+    font-size: 20px;
+}
+
+.forms-container .section-input section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forms-container form .section-input section input{
+    width: 300px;
+    height: 40px;
+    color: #6e0000;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    padding: 0 20px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+.forms-container form .section-input section span{
+    color: #6e0000;
+}
+
+.forms-container form button{
+    margin-top: 50px;
+}
+
+@media(max-width: 800px){
+    .forms-container{
+        max-width: 800px;
+    }
+    .forms-container form .section-input{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .forms-container form .section-input .title{
+        margin-bottom: 10px;
+        font-size: 17px;
+    }
+    .forms-container form .section-input section input{
+        width: 250px;
+        height: 35px;
+        padding: 0 10px;
+        margin-left: 0px;
+        font-size: 13px;
+    }
+    .forms-container form button{
+        margin-top: 20px;
+    }
+}
+
+/* ------------------------------------------ */
+
+.register-container{
+    margin: 0 auto;
+    max-width: 2000px;
+    height: 600px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-container .section-text{
+    width: 53%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #6e0000;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.register-container .section-text h1{
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.register-container .section-text p{
+    width: 60%;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 500px;
+    line-height: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@media(max-width: 800px){
+    .register-container{
+        max-width: 800px;
+        height: unset;
+        width: 96%;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .register-container .section-text{
+        width: 96%;
+        margin-right: 0px;
+    }
+
+    .register-container .section-text p{
+        width: 95%;
+        line-height: 37px;
+        margin-top: 30px;
+    }
+}

@@ -45,7 +45,8 @@
 }
 
 .header-container a:hover{
-    font-size: 20px
+    font-size: 20px;
+    cursor: pointer;
 }
 
 /* --------------------------*/

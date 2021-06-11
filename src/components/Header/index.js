@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 import { Affix } from 'antd'
 import { MenuUnfoldOutlined } from '@ant-design/icons'
 import logo from '../../assets/logo.png'
@@ -20,7 +19,7 @@ export function Header(){
         },
         {
             "name": "CADASTRAR",
-            "route": "/"
+            "route": "/register"
         },
         {
             "name": "ENTRAR",
@@ -68,7 +67,7 @@ export function Header(){
                         </section>
                         
                         {sections.map(section => (
-                            <Link to={section.route}>{section.name}</Link>
+                            <a href={section.route}>{section.name}</a>
                         ))}
                     </div>
                     

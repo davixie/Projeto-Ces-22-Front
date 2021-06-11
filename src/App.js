@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { Header } from './components/Header'
+import { Rodape } from './components/Rodape'
 import Routes from './routes'
 import './global.css'
 
@@ -15,7 +17,9 @@ function App() {
 
     return (
         <div>
+            <Header />
             <Routes />
+            <Rodape />
         </div>
     );
 }

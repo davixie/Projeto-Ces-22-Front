@@ -12,7 +12,7 @@ export function Rodape(){
                     <h4>
                         <Link
                             activeClass="active"
-                            to="aboutus"
+                            to="/"
                             spy={true}
                             smooth={true}
                             offset={-70}
