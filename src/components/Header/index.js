@@ -23,7 +23,7 @@ export function Header(){
         },
         {
             "name": "ENTRAR",
-            "route": "/"
+            "route": "/login"
         }
     ]
 
