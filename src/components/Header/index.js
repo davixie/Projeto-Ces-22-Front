@@ -1,35 +1,59 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Affix } from 'antd'
 import { MenuUnfoldOutlined } from '@ant-design/icons'
 import logo from '../../assets/logo.png'
 import './styles.css'
+import { useHistory } from 'react-router'
 
 export function Header(){
 
     const [open, setOpened] = useState(false)
-
-    const sections = [
-        {
-            "name": "HOME",
-            "route": "/"
-        },
-        {
-            "name": "PLANOS",
-            "route": "/"
-        },
-        {
-            "name": "CADASTRAR",
-            "route": "/register"
-        },
-        {
-            "name": "ENTRAR",
-            "route": "/login"
-        }
-    ]
+    const [sections, setSections] = useState([])
 
     function openDropper(e){
         e.preventDefault()
         setOpened(!open)
+    }
+
+    useEffect(() => {
+        const getUser = localStorage.getItem("userEmail")
+        if(getUser != null){
+            setSections([
+                {
+                    "name": "HOME",
+                    "route": "/"
+                },
+                {
+                    "name": "PLANOS",
+                    "route": "/"
+                }
+            ])
+        } else{
+            setSections([
+                {
+                    "name": "HOME",
+                    "route": "/"
+                },
+                {
+                    "name": "PLANOS",
+                    "route": "/"
+                },
+                {
+                    "name": "CADASTRAR",
+                    "route": "/register"
+                },
+                {
+                    "name": "ENTRAR",
+                    "route": "/login"
+                }
+            ])
+        }
+    }, [])
+
+    async function handleLogout(e){
+        e.preventDefault()
+        localStorage.clear()
+        window.location.reload();
     }
 
     if(window.innerWidth < 800){
@@ -48,6 +72,7 @@ export function Header(){
                                 {sections.map(section => (
                                     <a href={section.route}>{section.name}</a>
                                 ))}
+                                <a onClick={handleLogout}>SAIR</a>
                             </div>
                         }
                     </div>
@@ -69,6 +94,7 @@ export function Header(){
                         {sections.map(section => (
                             <a href={section.route}>{section.name}</a>
                         ))}
+                        <a onClick={handleLogout}>SAIR</a>
                     </div>
                     
                 </div>

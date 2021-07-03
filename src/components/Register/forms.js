@@ -57,7 +57,6 @@ export function FormmsRegister(){
 
     async function handleRegister(e){
         e.preventDefault()
-        console.log("em 0")
         try{
             let error = false;
             if(name === ""){
