@@ -26,6 +26,10 @@ export function Header(){
                 {
                     "name": "PLANOS",
                     "route": "/"
+                },
+                {
+                    "name": "CONSULTA",
+                    "route": "/appointment"
                 }
             ])
         } else{
