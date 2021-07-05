@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import { message } from 'antd'
-import {DatePicker} from 'react-date-picker'
-import {TimePicker} from 'react-time-picker'
 
 import './styles.css'
 
@@ -31,24 +29,6 @@ export function FormmsAppointment(){
         }else{ setEmptyTime(false) }
     }
 
-    function checkDate(){ 
-        console.log("aqui")
-        if(date===""){
-            setEmptyDate(true)
-            return;
-        }else{ setEmptyDate(false) }
-        setInvalidDate(false)
-    }
-    function checkTime(){
-        console.log("aqui")
-        if(time===""){
-            setEmptyTime(true)
-            return;
-        }else{ setEmptyTime(false) }
-        setInvalidTime(false)
-    }
-
-
     async function handleAppointment(e){
         e.preventDefault()
         console.log("em 0")
@@ -56,9 +36,6 @@ export function FormmsAppointment(){
             let error = false;
             if(date === ""){
                 setEmptyDate(true)
-                error = true;
-            }else if(invalidDate){
-                setInvalidDate(true)
                 error = true;
             }
             if(time === ""){
@@ -81,19 +58,23 @@ export function FormmsAppointment(){
             <section className="section-input">
                     <span className="title">Selecione uma data: </span>
                     <section>
-                        <input //DatePicker
-                            value={date}
-                            onChange={e => setDate(e.target.value)} 
-                        />
+                        <div>
+                            <input type="date" id="date" name="date" value={date}
+                                placeholder={date}
+                                selected={date}
+                                onChange={e => setDate(e.target.value)} 
+                            />
+                        </div>
                     </section>
                     <span className="title">Selecione um horário: </span>
                     <section>
-                        <input //TimePicker
+                        <input type="time" step="1800" id="time" name="time" value={time}
                             value={time}
-                            onChange={e => setTime(e.target.value)} 
+                            onChange={(e) => setTime(e.target.value)} 
                         />
                     </section>
                 </section>
+                <span className="comment">As consulta acontecem diariamente a partir de 06:00, até 20:00.</span>
                 <button type="submit">Marcar</button>
             </form>
         </div>

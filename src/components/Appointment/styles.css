@@ -15,11 +15,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .forms-container form .section-input .title{
     font-size: 20px;
+    margin-top: 12px;
+}
+
+.forms-container .comment{
+    margin-top:20px;
+    font-size: 18px;
 }
 
 .forms-container .section-input section{
@@ -43,7 +49,8 @@
 }
 
 .forms-container form button{
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 @media(max-width: 800px){
@@ -56,6 +63,7 @@
     }
     .forms-container form .section-input .title{
         margin-bottom: 10px;
+        margin-top: 10px;
         font-size: 17px;
     }
     .forms-container form .section-input section input{
