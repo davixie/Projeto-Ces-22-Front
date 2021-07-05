@@ -56,6 +56,7 @@ export function FormmsAppointment(){
         <div className="forms-container">
             <form onSubmit={handleAppointment}>
             <section className="section-input">
+                    <span className="comment">Selecione uma data e horário para sua consulta, um médico com disponibilidade irá atendê-lo virtualmente no link de consulta gerado. As consultas acontecem diariamente das 06:00 as 20:00.</span>
                     <span className="title">Selecione uma data: </span>
                     <section>
                         <div>
@@ -74,7 +75,6 @@ export function FormmsAppointment(){
                         />
                     </section>
                 </section>
-                <span className="comment">As consulta acontecem diariamente a partir de 06:00, até 20:00.</span>
                 <button type="submit">Marcar</button>
             </form>
         </div>

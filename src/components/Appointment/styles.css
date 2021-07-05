@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
 .forms-container form .section-input .title{
@@ -24,7 +24,7 @@
 }
 
 .forms-container .comment{
-    margin-top:20px;
+    margin-bottom: 10px;
     font-size: 18px;
 }
 
@@ -83,7 +83,7 @@
 .appointment-container{
     margin: 0 auto;
     max-width: 2000px;
-    height: 400px;
+    height: 500px;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -100,6 +100,10 @@
     background-color: #6e0000;
     border-radius: 50px;
     margin-right: 20px;
+}
+
+.section-input .comment{
+    width: 60%;
 }
 
 .appointment-container .section-text h1{
