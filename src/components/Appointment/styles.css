@@ -39,6 +39,20 @@
     margin-top: 20px;
 }
 
+.agendamento-container .section-choose-appointment .horario-container .title span{
+    font-size: 25px;
+    color: #6e0000;
+}
+
+.agendamento-container .section-choose-appointment .horario-container .title #finish{
+    margin-left: -30px;
+    margin-right: 60px;
+}
+
+.agendamento-container .section-choose-appointment .horario-container .title #name_doctor{
+    margin-left: -130px;
+}
+
 .agendamento-container .section-choose-appointment .horario-container div{
     width: 100%;
     height: 3px;
