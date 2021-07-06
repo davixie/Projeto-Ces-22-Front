@@ -6,6 +6,7 @@ import './styles.css'
 import { useHistory } from 'react-router'
 
 export function Header(){
+    const history = useHistory()
 
     const [open, setOpened] = useState(false)
     const [sections, setSections] = useState([])
@@ -16,15 +17,11 @@ export function Header(){
     }
 
     useEffect(() => {
-        const getUser = localStorage.getItem("userEmail")
+        const getUser = localStorage.getItem("token")
         if(getUser != null){
             setSections([
                 {
                     "name": "HOME",
-                    "route": "/"
-                },
-                {
-                    "name": "PLANOS",
                     "route": "/"
                 },
                 {
@@ -36,10 +33,6 @@ export function Header(){
             setSections([
                 {
                     "name": "HOME",
-                    "route": "/"
-                },
-                {
-                    "name": "PLANOS",
                     "route": "/"
                 },
                 {

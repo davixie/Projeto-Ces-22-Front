@@ -1,146 +1,63 @@
-.forms-container{
-    margin: 0 auto;
-    max-width: 1000px;
-}
-
-.forms-container form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.forms-container form .section-input{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px;
-}
-
-.forms-container form .section-input .title{
-    font-size: 20px;
-    margin-top: 12px;
-}
-
-.forms-container .comment{
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.forms-container .section-input section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.forms-container form .section-input section input{
-    width: 300px;
-    height: 40px;
-    color: #6e0000;
-    border: 1px solid #dcdce6;
-    border-radius: 8px;
-    padding: 0 20px;
-    font-size: 15px;
-    margin-left: 20px;
-}
-.forms-container form .section-input section span{
-    color: #6e0000;
-}
-
-.forms-container form button{
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-@media(max-width: 800px){
-    .forms-container{
-        max-width: 800px;
-    }
-    .forms-container form .section-input{
-        flex-direction: column;
-        margin-top: 20px;
-    }
-    .forms-container form .section-input .title{
-        margin-bottom: 10px;
-        margin-top: 10px;
-        font-size: 17px;
-    }
-    .forms-container form .section-input section input{
-        width: 250px;
-        height: 35px;
-        padding: 0 10px;
-        margin-left: 0px;
-        font-size: 13px;
-    }
-    .forms-container form button{
-        margin-top: 20px;
-    }
-}
-
-/* ------------------------------------------ */
-
-.appointment-container{
+.agendamento-container{
     margin: 0 auto;
     max-width: 2000px;
-    height: 500px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.appointment-container .section-text{
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.agendamento-container h1{
+    color: #6e0000;
+}
+
+.agendamento-container h2{
+    color: #6e0000;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+    width: 80%;
+}
+
+.agendamento-container .section-choose-appointment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.agendamento-container .section-choose-appointment .horario-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.agendamento-container .section-choose-appointment .horario-container div{
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
     background-color: #6e0000;
-    border-radius: 50px;
-    margin-right: 20px;
 }
 
-.section-input .comment{
-    width: 60%;
+.agendamento-container .section-choose-appointment .horario-container section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.appointment-container .section-text h1{
-    font-size: 30px;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 25px;
-}
-
-.appointment-container .section-text p{
-    width: 60%;
-    text-align: center;
-    color: #ffffff;
-    font-weight: 500px;
-    line-height: 40px;
-    margin-top: 50px;
-    margin-bottom: 0px;
-}
-
-@media(max-width: 800px){
-    .appointment-container{
-        max-width: 800px;
-        height: unset;
-        width: 96%;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .appointment-container .section-text{
-        width: 96%;
-        margin-right: 0px;
-    }
-
-    .appointment-container .section-text p{
-        width: 95%;
-        line-height: 37px;
-        margin-top: 30px;
-    }
+.agendamento-container .section-choose-appointment .horario-container section button{
+    width: 120px;
+    height: 60px;
+    font-size: 15px;
 }

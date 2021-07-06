@@ -1,6 +1,7 @@
 import { UserOutlined, LoginOutlined } from '@ant-design/icons'
 import React, { useState } from 'react'
 import { useHistory } from 'react-router'
+import { login } from '../../api/auth'
 import './styles.css'
 
 export function LoginComponent(){
@@ -10,21 +11,25 @@ export function LoginComponent(){
     const [senha, setSenha] = useState("")
 
     const [informationError, setInformationError] = useState(false)
-    const [connectionError, setConnectionError] = useState(false)
 
     async function handleLogin(e){
         e.preventDefault()
         try{
             if(email != "" && senha != ""){
+                let request = {
+                    username: email,
+                    password: senha
+                }
+                let response = await login(request)
+                if(response.status != 200) return
                 localStorage.setItem("loggedIn", "true")
-                localStorage.setItem("userEmail", email)
+                localStorage.setItem("token", response.data.token)
                 history.push("/")
                 window.location.reload();
                 
-            }
-            setInformationError(true)
+            } else{setInformationError(true)}
         }catch(err){
-            setConnectionError(true)
+            setInformationError(true)
             alert("Não foi possível realizar o login, tente novamente mais tarde.")
         }
     }
@@ -55,7 +60,6 @@ export function LoginComponent(){
                 </section>
 
                 {informationError ? <span>Email e senha incorretos</span> : <span></span>}
-                {!informationError && connectionError? <span>Houve um erro de conexão, tente novamente mais tarde</span> : <span></span>}
 
                 <button type="submit">ENTRAR</button>
             </form>

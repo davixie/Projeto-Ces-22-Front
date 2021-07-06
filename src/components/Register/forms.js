@@ -3,18 +3,21 @@ import { useHistory } from 'react-router-dom';
 import { message } from 'antd'
 
 import './styles.css'
+import axios from 'axios';
+import '../../api/constants'
+import { base_url } from '../../api/constants';
 
 export function FormmsRegister(){
     const history = useHistory();
 
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
-    const [city, setCity] = useState("")
     const [telefone, setTelefone] = useState("")
+    const [senha, setSenha] = useState("")
 
     const [emptyName, setEmptyName] = useState(false)
     const [emptyEmail, setEmptyEmail] = useState(false)
-    const [emptyCity, setEmptyCity] = useState(false)
+    const [emptySenha, setEmptySenha] = useState(false)
     const [emptyTelefone, setEmptyTelefone] = useState(false)
 
     const [invalidEmail, setInvalidEmail] = useState(false)
@@ -41,13 +44,6 @@ export function FormmsRegister(){
         }
     }
 
-    function checkEmptyCity(){
-        if(city===""){
-            setEmptyCity(true)
-            return;
-        }else{ setEmptyCity(false) }
-    }
-
     function checkTelefone(){
         if(telefone===""){
             setEmptyTelefone(true)
@@ -70,8 +66,8 @@ export function FormmsRegister(){
                 setInvalidEmail(true)
                 error = true;
             }
-            if(city===""){
-                setEmptyCity(true)
+            if(senha===""){
+                setEmptySenha(true)
                 error = true;
             }
             if(telefone===""){
@@ -82,6 +78,13 @@ export function FormmsRegister(){
                 error = true;
             }
             if(error) return;
+            let data = {
+                name: name,
+                phone: telefone,
+                email: email,
+                password: senha
+            }
+            await axios.post(base_url + "/auth/pacient_view_set/", data)
             history.push("/")
         }catch(err){
             alert("Infelizmente ocorreu um erro com o servidor.")
@@ -119,19 +122,6 @@ export function FormmsRegister(){
                     
                 </section>
                 <section className="section-input">
-                    <span className="title">Cidade: </span>
-                    <section>
-                        <input
-                            placeholder="Cidade"
-                            value={city}
-                            onBlur={checkEmptyCity}
-                            onChange={e => setCity(e.target.value)}    
-                        />
-                        {emptyCity && <span>Esse campo não pode estar em branco</span>}
-                    </section>
-                    
-                </section>
-                <section className="section-input">
                     <span className="title">Telefone: </span>
                     <section>
                         <input
@@ -142,6 +132,19 @@ export function FormmsRegister(){
                         />
                         {emptyTelefone && <span>Esse campo não pode estar em branco</span>}
                         {(!emptyTelefone && invalidTelefone) && <span>Insira um telefone válido</span>}
+                    </section>
+                    
+                </section>
+                <section className="section-input">
+                    <span className="title">Senha: </span>
+                    <section>
+                        <input
+                            type="password"
+                            placeholder="senha"
+                            value={senha}
+                            onChange={e => setSenha(e.target.value)}    
+                        />
+                        {emptySenha && <span>Esse campo não pode estar em branco</span>}
                     </section>
                     
                 </section>
