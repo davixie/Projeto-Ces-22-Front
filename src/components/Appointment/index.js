@@ -53,6 +53,14 @@ export function AppointmentContainer(){
             <h1>Olá {user.name}, marque sua consulta aqui</h1>
             <h2>Selecione uma data e horário para sua consulta, um médico com disponibilidade irá atendê-lo virtualmente no link de consulta gerado. As consultas acontecem diariamente das 06:00 as 20:00.</h2>
             <section className="section-choose-appointment">
+                <section className="horario-container">
+                    <section>
+                        <span>Inicio</span>
+                        <span>Termino</span>
+                        <span>Nome do Doutor</span>
+                        <span></span>
+                    </section>
+                </section>
                 {list.map(horario => (
                     <section className="horario-container">
                         <div></div>
